@@ -1,5 +1,12 @@
+use aoc_2024::Runner;
+
 /*
-  Call functions for parts 1 and 2.
-  The functions should automaticlly determine the day and read the input file.
+  Call function to run the all AOC exercises.
+  The function should automaticlly determine the day and read the input file.
+  Then it should print the results for all parts.
 */
-fn main() {}
+mod day1;
+
+fn main() {
+    day1::Day1::run(&mut day1::Day1::new());
+}

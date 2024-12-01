@@ -40,3 +40,23 @@ pub fn read_char_input(path: impl AsRef<Path>) -> Vec<char> {
         .chars()
         .collect()
 }
+
+pub fn read_lines<T: AsRef<Path>>(pathname: T) -> Vec<String> {
+    fs::read_to_string(pathname)
+        .expect("unable to open file")
+        .split('\n')
+        .filter(|s| !s.is_empty())
+        .map(|s| s.to_string())
+        .collect()
+}
+
+pub trait Runner {
+    fn parse(&mut self);
+    fn part1(&mut self);
+    fn part2(&mut self);
+    fn run(&mut self) {
+        self.parse();
+        self.part1();
+        self.part2();
+    }
+}
