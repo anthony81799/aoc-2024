@@ -21,7 +21,6 @@ impl Runner for Day2 {
             "Part 1: {}",
             self.input
                 .lines()
-                .into_iter()
                 .map(|line| {
                     let nums: Vec<i32> = line
                         .split_whitespace()
@@ -30,7 +29,6 @@ impl Runner for Day2 {
                     safe1(&nums)
                 })
                 .sum::<u32>()
-                .to_string()
         );
     }
 
@@ -39,7 +37,6 @@ impl Runner for Day2 {
             "Part 2: {}",
             self.input
                 .lines()
-                .into_iter()
                 .map(|line| {
                     let nums: Vec<i32> = line
                         .split_whitespace()
@@ -48,7 +45,6 @@ impl Runner for Day2 {
                     safe2(&nums)
                 })
                 .sum::<u32>()
-                .to_string()
         );
     }
 }
