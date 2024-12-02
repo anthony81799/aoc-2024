@@ -6,7 +6,9 @@ use aoc_2024::Runner;
   Then it should print the results for all parts.
 */
 mod day1;
+mod day2;
 
 fn main() {
     day1::Day1::run(&mut day1::Day1::new());
+    day2::Day2::run(&mut day2::Day2::new());
 }
