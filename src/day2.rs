@@ -17,8 +17,9 @@ impl Runner for Day2 {
     }
 
     fn part1(&mut self) {
+        println!("Day 2:");
         println!(
-            "Part 1: {}",
+            "\tPart 1: {}",
             self.input
                 .lines()
                 .map(|line| {
@@ -33,8 +34,8 @@ impl Runner for Day2 {
     }
 
     fn part2(&mut self) {
-        print!(
-            "Part 2: {}",
+        println!(
+            "\tPart 2: {}",
             self.input
                 .lines()
                 .map(|line| {

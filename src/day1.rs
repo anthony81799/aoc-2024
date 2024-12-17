@@ -26,6 +26,7 @@ impl Runner for Day1 {
     }
 
     fn part1(&mut self) {
+        println!("Day 1:");
         self.list1.sort();
         self.list2.sort();
         let sum: i64 = self
@@ -34,7 +35,7 @@ impl Runner for Day1 {
             .zip(self.list2.clone())
             .map(|(left, right)| (left - right).abs())
             .sum::<i64>();
-        println!("Part 1: {sum}");
+        println!("\tPart 1: {sum}");
     }
 
     fn part2(&mut self) {
@@ -48,6 +49,6 @@ impl Runner for Day1 {
                 left * count
             })
             .sum::<i64>();
-        println!("Part 2: {sum}");
+        println!("\tPart 2: {sum}");
     }
 }
